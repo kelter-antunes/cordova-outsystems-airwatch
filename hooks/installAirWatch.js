@@ -8,7 +8,7 @@ module.exports = function(ctx) {
     var projectFolder = path.join(ctx.opts.projectRoot);
 
     var spawnSync = child_process.spawnSync;
-    var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'outsystems-plugin-kelter-airwatch-sdk@1.3.3' ], {
+    var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'outsystems-plugin-kelter-airwatch-sdk' ], {
         cwd: projectFolder   });
 
     if(pluginInstall.stdout){
