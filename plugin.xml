@@ -12,7 +12,7 @@
     <platform name="android">
 
         <!-- Gradle reference -->
-        <framework src="libs/build.gradle" custom="true" type="gradleReference" />
+        <!-- <framework src="libs/build.gradle" custom="true" type="gradleReference" /> -->
 
         <!-- Android hooks -->
         <!-- <hook type="after_plugin_install" src="hooks/removeJars.js" /> -->
