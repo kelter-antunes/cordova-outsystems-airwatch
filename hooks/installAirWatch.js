@@ -8,6 +8,26 @@ module.exports = function(ctx) {
     var projectFolder = path.join(ctx.opts.projectRoot);
 
     var spawnSync = child_process.spawnSync;
+
+
+    var pluginRemove = spawnSync('cordova', [ 'plugin','remove', 'cordova-plugin-splashscreen' ], {
+    cwd: projectFolder   });
+
+    if(pluginRemove.stdout){
+        console.log(pluginRemove.stdout.toString('utf8'));
+    }
+
+    if(pluginRemove.stderr){
+        console.error(pluginRemove.stderr.toString('utf8'));        
+    }
+
+    if(pluginRemove.error || pluginRemove.signal){
+        throw "Failed to remove cordova-plugin-splashscreen."
+    }
+
+
+
+
     var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'outsystems-plugin-kelter-airwatch-sdk' ], {
         cwd: projectFolder   });
 
