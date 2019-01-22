@@ -4,7 +4,7 @@ module.exports = function(ctx) {
     path = ctx.requireCordovaModule('path'),
     child_process = ctx.requireCordovaModule('child_process');
 
-    console.log("Installing Air Watch plugin...");
+    console.log("Removing cordova-plugin-splashscreen...");
     var projectFolder = path.join(ctx.opts.projectRoot);
 
     var spawnSync = child_process.spawnSync;
@@ -26,7 +26,7 @@ module.exports = function(ctx) {
     }
 
 
-
+    console.log("Installing Air Watch plugin...");
 
     var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'outsystems-plugin-kelter-airwatch-sdk' ], {
         cwd: projectFolder   });
