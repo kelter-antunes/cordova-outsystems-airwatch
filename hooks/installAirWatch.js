@@ -9,7 +9,7 @@ module.exports = function(ctx) {
 
     var spawnSync = child_process.spawnSync;
 
-
+    /*
     var pluginRemove = spawnSync('cordova', [ 'plugin','remove', 'cordova-plugin-splashscreen' ], {
     cwd: projectFolder   });
 
@@ -24,11 +24,12 @@ module.exports = function(ctx) {
     if(pluginRemove.error || pluginRemove.signal){
         throw "Failed to remove cordova-plugin-splashscreen."
     }
+    */
 
 
     console.log("Installing Air Watch plugin...");
 
-    var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'airwatch-sdk-fiori-plugin' ], {
+    var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'outsystems-plugin-kelter-airwatch-sdk' ], {
         cwd: projectFolder   });
 
     if(pluginInstall.stdout){
