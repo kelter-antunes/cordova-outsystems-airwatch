@@ -28,7 +28,7 @@ module.exports = function(ctx) {
 
     console.log("Installing Air Watch plugin...");
 
-    var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'outsystems-plugin-kelter-airwatch-sdk' ], {
+    var pluginInstall = spawnSync('cordova', [ 'plugin','add', 'airwatch-sdk-fiori-plugin' ], {
         cwd: projectFolder   });
 
     if(pluginInstall.stdout){
