@@ -8,12 +8,6 @@
         <engine name="cordova" version=">=3.4.0"/>
     </engines>
 
-    <!-- JS config -->
-    <js-module src="www/airwatch.js" name="AirwatchSDK">
-        <clobbers target="plugins.airwatch" />
-    </js-module>
-
-
     <!-- Global hooks -->
     <hook type="before_plugin_install" src="hooks/installAirWatch.js"/>
     <hook type="before_plugin_uninstall" src="hooks/removeAirWatch.js"/>
